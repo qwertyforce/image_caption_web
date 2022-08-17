@@ -127,6 +127,6 @@ async def read_root():
 @app.post("/get_image_caption")
 async def get_caption_handler(image: bytes = File(...)):
     try:
-        return {"text":image_caption(read_img_buffer(image))}
+        return image_caption(read_img_buffer(image))
     except:
         raise HTTPException(status_code=500, detail="Can't get image caption")
