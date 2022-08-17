@@ -124,7 +124,7 @@ def read_img_buffer(image_buffer):
 async def read_root():
     return {"Hello": "World"}
 
-@app.post("/get_caption")
+@app.post("/get_image_caption")
 async def get_caption_handler(image: bytes = File(...)):
     try:
         return {"text":image_caption(read_img_buffer(image))}
