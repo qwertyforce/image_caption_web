@@ -8,3 +8,8 @@ pytorch_lightning
 einops
 datasets
 rouge_score
+fastapi==0.80.0
+Pillow==9.2.0
+tqdm==4.64.0
+uvicorn==0.18.2
+wget==3.2
